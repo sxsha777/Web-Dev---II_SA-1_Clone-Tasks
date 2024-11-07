@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+          <h2>To-Do List</h2>
+          <input type="text" id="tdInput" placeholder=".....">
+          <button class="add-task" onclick="createNewTask()">Add Task</button>
+        </div>
+      
+        <!-- To-do List -->
+        <ul id="todoList">
+          <li> Feed the cats <span class="delete-task" onclick="deleteTask(this)">-</span></li>
+          <li class="checked"> Do homework <span class="delete-task" onclick="deleteTask(this)">-</span></li>
+          <li> Daily login on games <span class="delete-task" onclick="deleteTask(this)">-</span></li>
+        </ul>
+      </div>
+
+      <script>
+        // Function to delete a task
+        function deleteTask(element) {
+          element.parentElement.style.display = 'none'; // remove the completed task
+        }
+      
+        // Function to create a new task
+        function createNewTask() {
+          const inputValue = document.getElementById('tdInput').value.trim(); // get input from user
+      
+          if (inputValue === '') {
+            alert('Please enter a task!'); // alert if nothing is inputted
+            return;
+          }
+      
+          // Create a new task item (li)
+          const taskItem = document.createElement('li');
+          taskItem.textContent = inputValue; //takes input
+      
+          // Create a delete button for the new task
+          const deleteButton = document.createElement('span');
+          deleteButton.textContent = '-'; //symbol on delete button
+          deleteButton.className = 'delete-task';
+          deleteButton.onclick = function() {
+            deleteTask(deleteButton); // deleting the task on click
+          };
+      
+          // add the delete button to the items in list
+          taskItem.appendChild(deleteButton);
+      
+          // add the new task to the list
+          document.getElementById('todoList').appendChild(taskItem);
+      
+          // clear the input field
+          document.getElementById('todoList').value = ''; // clearing input box 
+        }
+      
+        // event listener to mark tasks as completed
+        document.getElementById('todoList').addEventListener('click', function(e) {
+          if (e.target.tagName === 'LI') {
+            e.target.classList.toggle('checked'); //marking the item as done
+          }
+        });
+      </script>
+
+</body>
+</html>

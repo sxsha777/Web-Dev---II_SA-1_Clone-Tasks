@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/*styling the body by adding a background image*/
+body {
+    background-image: url("desktop-wallpaper-Обои-на-телефон-abstract-design-abstract-background-beige-minimalist-brown.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; /*fixing the position of the background image*/
+}
+
+/*styling the navigation bar*/
+.navbar {
+    position: fixed;
+    background-color: transparent; /*nav bar is transparent*/
+    width: 100%; 
+    padding: 30px;
+    top: 0;
+    display: flex; /*making the display flexible to customize it further*/
+    align-items: left; /*aligning items to the left side*/
+    justify-content: left;
+}
+
+/*styling the logo of the chocolate shop*/
+.logo {
+    letter-spacing: 1.5px; /*adding a little spacing between letters*/
+    line-height: 19px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /*adding font*/
+    font-size: 30px; /*defining the size of the text*/
+    font-weight: 100; /*making the text more bold*/
+    color: #352117; /*color of the text*/
+}
+
+/*styling the items in the navigation bar*/
+.n-list {
+    margin-left: 50px;
+}
+
+.n-list a{
+    font-size: 15px; /*defining the size of text in the navbar*/
+    font-weight: 100; /*adding some font weight to make it more bold*/
+    font-family: 'Lato', sans-serif;
+    color: #372a21;
+    text-transform: uppercase; /*making all text capitalized*/
+    margin-left: 40px; /*adding some margin to the left*/
+    display: inline-block;
+    line-height: 20px;
+}
+
+.n-list a::after{
+    display: block; /*setting display to block*/
+    content: '';
+    height: 1.8px;
+    width: 0;
+    background-color: #2f2119; /*adding color*/
+    transition: width 0.5s; /*adding hover effect*/
+}
+
+.n-list a:hover::after {
+    width: 100%; /*on hover, a line appears under text*/
+}
+
+#home {
+    height: 80vh;
+}
+
+/*styling the content on the page*/
+.con {
+    height: 120%;
+    padding: 0 40px; /*adding some padding*/
+    align-items: center; /*aligning items to the centre*/
+    display: flex; 
+    flex-direction: row; /*setting display to row*/
+}
+
+/*styling the image on the main content of the page*/
+.con img {
+    width: auto; 
+    height: 520px; /*fixing the image height*/
+    border-radius: 5px; /*adding some corner rounding*/
+}
+
+.info {
+    text-align: center;
+    color: #372a21;
+    padding: 35px;
+    height: 350px;
+    margin-left: 30px;
+}
+
+.info h1{
+    padding: 20px;
+    width: 300px;
+    margin: 30px auto;
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    border: 6px solid #54402e;
+    line-height: 60px;
+}
+
+.info h1 span{
+    letter-spacing: 5px;
+    display: inline-block;
+}
+
+.info p{
+    font-size: 17px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+/*styling the shop-now button*/
+.info button {
+    font-size: 19px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700; /*adding some weight to the font*/
+    padding: 15px 35px;
+    border: none; /*removing any default button decoration*/
+    outline: none;
+    border-radius: 3px; /*adding some corner rounding*/
+    margin-top: 20px;
+    background-color: #c19169; /*giving color to the button*/
+    color: #372a21; /*setting text color*/
+}
+
+.info button:hover {
+    background-color: #ad8463; /*adding hover effect*/
+}
+
+.footer {
+    margin-top: 60px;
+    background-color: #ad84634e;
+    color: #2f2119;
+    text-align: center; 
+    padding: 20px; 
+    position: relative; /* making the position relative */
+    bottom: 0; /* sticking to the bottom of the page */
+    width: 100%; /* width is full 100% */
+    font-family: 'Lato', sans-serif; 
+}
+
+.footer-con {
+    margin-top: 50px;
+    max-width: 1200px; /* maximum width for bigger screens is 1200px */
+    margin: 0 auto; /* Center the content */
+}
+
+.footer p {
+    margin: 10px 0; /* Spacing between paragraphs */
+}
+
+.socials {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+.socials li {
+    display: inline; /* Inline elements for horizontal layout */
+    margin: 0 15px; /* Spacing between icons */
+}
+
+.s-link {
+    color: white; 
+    text-decoration: none; /* removing default text decoration */
+    font-size: 18px; /* fixing font sizing */
+    transition: color 0.3s ease; /* adding transition for hover effect */
+}
+
+.s-link:hover {
+    color: #352117; /* color changes on hover*/
+}

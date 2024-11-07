@@ -1,0 +1,39 @@
+body {
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+  }
+
+h1 {
+    font-size: 30px;
+    padding: 5px;
+    margin: 15px;
+    text-decoration: underline; /*adding some text deco*/
+}
+
+  /* styling the container for the photo grid */
+  .p-grid {
+    display: grid; /*displaying images in grid format*/
+    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 15px; /*spacing between items in grid*/
+  }
+
+  .p-grid img {
+    width: 100%;
+    height: auto; /*auto adjusts height according to the width*/
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /*adding a shadow behind images to make it stand out*/
+    transition: transform 0.3s ease;
+  }
+
+  .p-grid img:hover {
+    transform: scale(1.05); /*adding hover effect to the images in the grid*/
+  }
+
+/*making the photogrid responsive in smaller screens as well*/
+  @media screen and (max-width: 600px) {
+    .p-grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  }

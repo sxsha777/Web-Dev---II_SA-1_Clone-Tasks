@@ -1,0 +1,92 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* page background color is black*/
+  }
+
+  /* layout for the whole dashboard of the page */
+  .d-b {
+    display: grid;
+    grid-template-areas: "header header" "sidebar main";
+    grid-template-columns: 250px 1fr; /* column size for the main content and the side bar */
+    grid-template-rows: 80px 1fr;     /* size for the main content and header */
+    height: 100vh; 
+    gap: 20px; /* adding gap*/
+  }
+
+  /* styling the header section */
+  .header {
+    color: white; /* text color is white*/
+    padding: 20px; /* adding some padding*/
+    display: flex; /* making display flexible*/
+    align-items: center;
+    grid-area: header; 
+    background-color: #48345e; /* giving header color*/
+    justify-content: space-between;
+  }
+
+  .header h1 {
+    margin: 0;
+  }
+
+  /* styling the sidebar */
+  .sidebar {
+    gap: 15px;
+    color: white; 
+    grid-area: sidebar; /*location of the item in grid*/
+    background-color: #48345e; /* color of the element*/
+    padding: 20px;
+    display: flex; /* flexible display*/
+    flex-direction: column; /* direction of flex*/
+  }
+
+  .sidebar a {
+    color: white;
+    text-decoration: none; /* removing any type of text decoration*/
+    background-color: #382948;
+    border-radius: 3px; /* adding corner rounding*/
+    text-align: center; /* align text to middle*/
+    padding: 10px;
+  }
+
+  .sidebar a:hover {
+    background-color: rgb(40, 18, 72); /* changing color of side widgets on hover*/
+  }
+
+  /* styling the area for displaying main content */
+  .m-con {
+    grid-area: main;
+    padding: 20px;
+  }
+
+  .widgets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* defining the number and size of the columns in the grid*/
+    gap: 20px;
+  }
+
+  /* styling widgets */
+  .widget {
+    background-color: #3a244b;
+    padding: 20px;
+    border-radius: 8px; /*adding corner rounding for widgets*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .widget h3 {
+    margin-top: 0;
+    font-size: 18px;
+  }
+
+  /* making the page responsive to smaller screens */
+  @media screen and (max-width: 768px) {
+    .dashboard {
+      grid-template-areas: "header" "main";
+      grid-template-columns: 1fr; /* 1 fraction of the grid*/
+    }
+
+    .sidebar {
+      display: none; /* hiding the sidebar on smaller screens */
+    }
+  }

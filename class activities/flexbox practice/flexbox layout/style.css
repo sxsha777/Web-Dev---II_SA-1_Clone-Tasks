@@ -1,0 +1,30 @@
+body {
+    margin: 0px;
+    font-family: Arial, sans-serif;
+}
+
+/* styling appearance of navigation bar */
+.navbar {  
+    display: flex; /*flexible layour*/
+    background-color: #353535;
+    padding: 15px;
+}
+
+.navlinks {
+    display: flex; 
+    justify-content: space-around;   /*space around the links in the navbar*/
+    list-style: none; 
+}
+
+/* styling the text in the navigation bar */
+.navlinks a {
+    color: white;
+    text-decoration: none; 
+    padding: 10px 5px 10px 5px;   /*padding for the text*/
+    transition: background-color 0.3s; /* adding a transition */
+}
+
+/* adding hover effects to links */
+.navlinks a:hover {
+    background-color: #63246d; /* Change background on hover */
+}

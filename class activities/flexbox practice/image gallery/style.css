@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+/*styling the body*/
+body {
+    background-color: black;
+    height: 100vh;
+    margin-top: 50px;
+}
+
+/*Arranging the images*/
+.img-gallery {
+    display: flex;
+    gap: 10px; /* spacing between the images */
+    flex-wrap: wrap;
+    align-items: center; /* aligning items to centre*/
+    justify-content: center;
+    padding: 10px;
+}
+
+.img-gallery img {
+    width: 100%;
+    max-width: 300px; 
+    height: auto; /* height is auto adjusted depending on width*/
+    object-fit: cover;
+    border-radius: 5px; /* adding corner rounding*/
+    transition: transform 0.3s ease-in-out;
+}
+
+.img-gallery img:hover {
+    transform: scale(1.05); /*hover effect*/
+}
+
+/*making images responsive to screensize*/
+@media (max-width: 1200px) {
+    .img-gallery img {
+        max-width: 250px; /*when max width is 1200px, max width of img will be 250px*/
+    }
+}
+
+@media (max-width: 900px) {
+    .img-gallery img {
+        max-width: 200px; /*when max width is 900px, max width of img will be 200px*/
+    }
+}
+
+@media (max-width: 600px) {
+    .img-gallery img {
+        max-width: 150px; /*when max width is 600px, max width of img will be 150px*/
+    }
+}

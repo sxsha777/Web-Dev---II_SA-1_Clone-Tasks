@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000000;
+  }
+
+  /* box sizing */
+  * {
+    box-sizing: border-box;
+  }
+
+  /* styling the main container */
+  .container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #000000;
+    border-radius: 7px; /* added corner rounding*/
+  }
+
+  /* styling the header */
+  .header {
+    color: white; /* text color is white */
+    text-align: center; /*text aligned to centre*/
+    background-color: #6b5cc0;
+    padding: 20px;
+    border-radius: 7px; /* added corner rounding*/
+  }
+
+  .header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .header input {
+    width: 75%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+  }
+
+  /* styling the add-task button */
+  .add-task {
+    background-color: #404a7b; /* adding color to button*/
+    color: white;
+    border-radius: 4px; /* adding corner rounding*/
+    font-size: 16px; /*adjusting font size*/
+    padding: 12px;
+    margin-top: 10px; /* adding some margins*/
+    border: none;
+    width: 20%; /* width of add-task button*/
+    transition: background-color 0.3s;
+  }
+
+  .add-task:hover {
+    background-color: #1b256c; /*adding hover effect to button*/
+  }
+
+  /* container for to-do list */
+  ul {
+    list-style: none; /* removing styling from list*/
+    padding: 0;
+    margin: 20px 0; 
+  }
+
+  /* styling the list */
+  ul li {
+    display: flex; /*flexible display*/
+    justify-content: space-between;
+    align-items: center; /*aligning items to centre*/
+    padding: 14px 20px; /*adding padding to look more appealing*/
+    background-color: #414040;
+    border: 1px solid #7e7c7c;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    transition: background-color 0.2s; /* changing background color as transition to make it responsive*/
+  }
+
+  ul li:hover {
+    background-color: #8f8f8f;
+  }
+
+  /* Completed task style */
+  ul li.checked {
+    background-color: #c5e1a5;
+    text-decoration: line-through; /* crossing out the finished item in the list*/
+    color: #555;
+  }
+
+  /* Close button for deleting tasks */
+  .delete-task {
+    background-color: #e57373;
+    color: white; /* text color*/
+    padding: 8px 12px;
+    border-radius: 4px; /* adding corner rounding*/
+    transition: background-color 0.3s;
+  }
+
+  .delete-task:hover {
+    background-color: #d32f2f; /* adding hover effect to the delete button*/
+  }

@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh; /* setting the height of the body */
+    display: flex; /* making the display flexible */
+    justify-content: center; /* aligning items to centre horizontally */
+    align-items: center; /* aligning items to centre vertically */
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* page background color is black*/
+    height: 100vh;
+}
+
+.pro-display {
+    display: grid; /* items are displayed in a grid*/
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px; /*gap between rows and columns in grid is 20px*/
+    padding: 40px;
+    margin: 0 auto;
+    background-color: #212121; /*container color*/
+    border-radius: 8px; /* adding corner rounding to make it more aesthetic*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px; /* maximum width of the content displayed*/
+}
+
+/* arranging the items in grid in stacks on smaller screens */
+@media screen and (max-width: 750px) {
+  .container {
+      grid-template-columns: 1fr;
+      padding: 20px;
+    }
+}
+
+/* styling the picture of the product */
+.pro-image {
+    grid-column: 1 / 2; /* location of the item in the grid */
+    width: 100%; 
+}
+
+.pro-image img {
+    width: 100%; /*image width is 100%*/
+    height: auto; /* auto adjusting the height of the image*/
+    border-radius: 8px; /* adding some corner rounding*/
+}
+
+/* styling the details of the product */
+.pro-details {
+    flex-direction: column;
+    justify-content: center; /*items are aligned to centre*/
+    gap: 20px;
+    grid-column: 2 / 3; /* location of the item in the grid */
+    display: flex; /* enabling flex display*/
+}
+
+/* styling the item name*/
+.pro-header {
+    font-size: 30px; /* making header more visible and prominent*/
+    margin: 0;
+    color: #fffdfd;
+}
+
+/* styling the price of the item*/
+.pro-price {
+    font-size: 1.5rem;
+    color: #b9a6c8;
+    font-weight: bold; /* making the text bold*/
+}
+
+.product-des {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6; /* setting the line height for the text*/
+}
+
+/* styling the Add to Cart Button */
+.a-t-c {
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #8d2ecc; /* color of the add-to-cart button is purple*/
+    color: white; /* text color is white*/
+    font-size: 20px;
+    border: none; /* removing border from the button*/
+    transition: background-color 0.3s ease; /* transition to create a hover effect for button*/
+}
+
+.a-t-c:hover {
+    background-color: #6226a2; /* changing color of button on hovering*/
+}
