@@ -1,0 +1,282 @@
+/*importing required fonts into css*/
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Protest+Guerrilla&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Josefin Sans", sans-serif; /*adding fonts to the body*/
+    background-color: #e9e9e9; /*adding the assigned color to the background*/
+}
+.container {
+    padding: 20px;
+    width: 80%;  /*setting the width of the container*/
+    margin: 0 auto;  /*positioning the container to the centre*/
+    background-color: #ffffff;  /*adding the assigned color to the background*/
+    padding-top: 15px;   /*adding padding to the top of container*/
+}
+.container .main-title {
+    font-size: 5em;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    margin-bottom: 20px;
+    text-align: center;   /*aligning the text to the centre*/
+}
+
+/*styling the logo at the top of the page*/
+.header img {
+    border-radius: 50%;   /*making the logo a circle*/
+    height: 200px;   /*setting the height of the logo to 200px*/
+    width: 200px;   /*setting the width of the logo to 200px*/
+}
+
+/*styling the nav bar*/
+.nav {
+    padding-top: 20px;
+    text-align: center;    /*aligning the text in nav-bar to the centre*/
+    margin: 20px;    /*adding some  margin to the nav-bar*/
+}
+
+.nav a {
+    margin: 0 15px;    /*adding some margin to the links in nav-bar*/
+    text-decoration: none;    /*removing the underline from the links*/
+    color: black;     /*color of the links is black*/
+}
+
+/*styling the main heading*/
+.main-title {
+    font-family: "Protest Guerrilla", sans-serif;  /*adding fonts to the main title*/
+    font-size: 34px;     /*setting the size of the main title to 36px*/
+    font-weight: bold;
+}
+
+.sub-title {
+    margin-bottom: 20px;
+    font-family: "Protest Guerrilla", sans-serif;
+    font-size: 30px;
+}
+
+/* styling the main contents in the page*/
+.content {
+    margin-bottom: 20px;
+    column-gap: 20px;     /*adding some spacing between the columns*/
+}
+
+.content h2 {
+    font-family: "Protest Guerrilla", sans-serif;
+    font-size: 30px;      /*setting the size of the headings to 30px*/
+    break-inside: avoid;      /*preventing the text from breaking into a new column*/
+    margin-top: 20px;
+}
+
+.content p {
+    break-inside: avoid;
+    font-family: "Josefin Sans", sans-serif;
+    margin-bottom: 10px;
+}
+
+/*styling the album covers*/
+.albums {
+    display: flex;      /*displaying the albums in a row*/
+    justify-content: space-between;      /*adding some space between the albums*/
+    margin: 0;       /*removing margin from the albums*/
+}
+
+.featured-album {
+    flex: 1; 
+    margin-right: 0;
+}
+
+.featured-album img {
+    width: 100%;       /*setting the width of the album cover to 100%*/
+    height: auto;        /*setting the height of the featured album cover to auto*/
+}
+
+.album-grid {
+    flex: 1;
+    display: grid;       /*displaying the albums in a grid*/
+    grid-template-columns: repeat(2, 1fr);       /*allowing the grid to have 2 columns*/
+    margin-bottom: 15px;
+}
+
+.album-grid img {
+    width: 100%;
+    height: auto;
+}
+
+/*styling the author section*/
+.author {
+    width: 90%;
+    display: flex;
+    flex-direction: row-reverse;      /*setting the direction of the flexbox*/
+    padding: 20px;
+    margin-left: 60px;
+}
+
+/*styling the author header*/
+.author-info h2 {
+        font-family: "Protest Guerrilla", sans-serif;
+        font-size: 30px; 
+        margin-top: 50px;
+        text-align: center;
+}
+    
+.author-info p {
+        padding: 20px;
+}
+    
+.author-prof {
+        text-align: center;
+}
+    
+.author-prof img {
+        width: 200px;
+        border-radius: 50%;       /*making the author's profile picture a circle*/
+        object-fit: cover;        /*making sure the image is not distorted*/
+        padding: 20px;
+        margin-right: 30px;
+}
+
+.footer {
+    text-align: center;
+    padding:15px 0;
+    background-color: #1d181d;
+    color: #ffffff;
+    width: 100%;
+}
+
+/*media query for desktop*/
+@media (min-width: 1024px) {
+    .sub-con p {
+        display: flex;
+        padding-right: 340px;
+    }
+    .content {
+        column-count: 3;     /*dividing the content into 3 columns*/
+    }
+}
+
+/*adding media query to make the webpage responsive on tablets*/
+@media only screen and (max-width: 1023px) and (min-width: 720px) {
+    .nav {
+        justify-content: center;        /*placing the navigation bar in the centre*/
+        display: flex;        /*displaying the navigation bar as a flexbox*/
+        margin-top: 12px;
+        margin-bottom: 12px;
+        width: 100%;         /*making the navigation bar full width*/
+    }
+
+    .header img {
+        border-radius: 50%;   /*making the logo a circle*/
+        height: auto;   
+        width: 80px; 
+    }
+
+    .main-title, .sub-title, .container h2 {
+        text-align: center;  
+    }
+
+    .content {
+        column-gap: normal;
+        column-count: 1;         /*displaying the content in one column*/
+        display: inline-block;     /*content is shown as an inline block*/
+        margin: 0 12px;
+    }
+
+    img {
+        height: auto;
+        width: 100%;  
+    }
+}
+
+/*adding media query to make the webpage responsive on bigger mobiles*/
+@media (min-width: 540px) and (max-width: 719px) {
+    .header img {
+        border-radius: 50%; 
+        height: auto;   
+        width: 80px; /* adjusting logo size to fit smaller screens better*/
+    }
+
+    .main-title, .sub-title, .container h2 {
+        text-align: center;  
+    }
+
+    .albums, .album-grid img {
+        display: block;          /*displaying the albums covers one under the other*/
+        width: 100%;          /*the albums covers width will still be 100%*/
+        height: auto; 
+    }
+
+    .album-grid {
+        columns: 1;          /*displaying the albums covers in one column*/
+        display: block;
+    }
+
+    .author {
+        display: flex;
+        flex-direction: column; /*profile image is displayed above the author info*/
+        align-items: center; 
+        padding: 0;
+        margin-left: 30px;
+    }
+
+    .author-info h2 {
+        margin-top: 0px;
+    }
+
+    .author-info p {
+        padding: 12px;
+    }
+
+    .author-prof img {
+        margin-right: 0;
+    }
+}
+
+/*adding media query to make the webpage responsive on smaller mobiles*/
+@media (min-width: 360px) and (max-width: 539px) {
+    .main-title, .sub-title, .container h2 {
+        text-align: center;  
+    }
+
+    .header img {
+        border-radius: 50%; 
+        height: auto;   
+        width: 80px;
+    }
+
+    .albums, .album-grid img {
+        display: block;          /*displaying the albums covers one under the other*/
+        width: 100%;          /*the albums covers width will still be 100%*/
+        height: auto; 
+    }
+
+    .album-grid {
+        columns: 1;          /*displaying the albums covers in one column*/
+        display: block;
+    }
+
+    .author {
+        display: flex;
+        flex-direction: column;   /*profile image is displayed above the author info*/
+        align-items: center;  
+        padding: 0;
+        margin-left: 30px;
+    }
+
+    .author-info h2 {
+        margin-top: 0px;
+    }
+
+    .author-info p {
+        padding: 12px;
+    }
+
+    .author-prof img {
+        margin-right: 0;
+    }
+}
+    
