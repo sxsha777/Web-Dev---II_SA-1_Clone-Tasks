@@ -248,6 +248,10 @@ body {
         width: 80px;
     }
 
+    .container {
+        width: 100%;
+    }
+
     .albums, .album-grid img {
         display: block;          /*displaying the albums covers one under the other*/
         width: 100%;          /*the albums covers width will still be 100%*/
